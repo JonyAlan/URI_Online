@@ -1,0 +1,26 @@
+#include <stdio.h>
+  
+int main() {
+  
+ 
+int h1, m1, h2, m2, tt1, tt2, ht, mt;
+ 
+scanf("%d %d %d %d", &h1, &m1, &h2, &m2);
+ 
+ if((h2 < h1)||(h2 == h1))
+h2 = h2 + 24;
+ 
+tt1 = (h1 * 60) + m1;
+tt2 = (h2 * 60) + m2;
+
+ 
+ht = (tt2 - tt1) / 60;
+mt = (tt2 - tt1) % 60;
+ 
+if(tt1 == tt2)
+printf("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)\n");
+else
+printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", ht, mt);
+ 
+return 0;
+}
